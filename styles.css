@@ -140,17 +140,36 @@ button:hover {
 } */
 
 @media (max-width: 650px) {
+    body {
+        height: 95vh;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 75vh;
+        /* Adjust the margin-top value as needed */
+        max-height: 75vh;
+        /* Set a maximum height for the form container */
+    }
+
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
 
     button {
         width: 50px;
+        margin-top: 10px;
+        /* Adjust the margin-top value for the button */
     }
 
     input {
         height: 40px;
+        margin-top: 10px;
+        /* Adjust the margin-top value for the input field */
     }
 }
