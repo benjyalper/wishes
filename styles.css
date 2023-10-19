@@ -138,3 +138,19 @@ button:hover {
         transform: scale(5);
     }
 } */
+
+@media (max-width: 650px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 50px;
+    }
+
+    input {
+        height: 40px;
+    }
+}
