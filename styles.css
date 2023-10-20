@@ -143,6 +143,7 @@ button:hover {
     button {
         width: 50px;
         margin-top: 10px;
+        margin-left: none;
     }
 
     input {
