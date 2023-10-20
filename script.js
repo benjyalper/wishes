@@ -1,15 +1,14 @@
 $(document).ready(function () {
 
     const star = $('.star');
-    const maxX = $(window).width();
-    const maxY = $(window).height();
+    const maxX = $(window).width() / 2; // Adjusted for the top half of the screen
+    const maxY = $(window).height() / 2; // Adjusted for the top half of the screen
 
     let animationStarted = false;
 
     var wishes = [
         "Make A Wish",
         "הביעו משאלה",
-        "null",
         "تمنى أمنية",
         "许个愿",
         "Faites un vœu",
@@ -38,9 +37,54 @@ $(document).ready(function () {
         }, 2000);
 
         currentIndex = (currentIndex + 1) % wishes.length;
-    }
 
-    setInterval(changeWishText, 3000);
+
+
+        const wishExamples = [
+            "שישוחררו החטופים",
+            "Help the children",
+            "Peace שלום سلام",
+            "Stop the suffering",
+            "שהחיילים יחזרו בשלום",
+            "שהמלחמה תיגמר"
+        ];
+        const wishElement = $('<div class="wishExample"></div>').html(wishExamples[Math.floor(Math.random() * wishExamples.length)]);
+        const fontSize = Math.floor(Math.random() * 21) + 10; // Font size between 20 and 30 pixels
+        const leftPosition = Math.floor(Math.random() * $(window).width());
+        // Random X position within the entire width of the screen
+        const topPosition = Math.floor(Math.random() * maxY);
+
+        wishElement.css({
+            'position': 'absolute',
+            'left': leftPosition + 'px',
+            'top': topPosition + 'px',
+            'font-size': fontSize + 'px',
+            'font-family': 'Verdana, Geneva, Tahoma, sans-serif',
+            'text-align': 'center',
+            'color': '#a6bfc2',
+            'opacity': 0,
+            'border-radius': '20px',
+            'padding': '5px 15px',
+            'text-shadow': '0 0 20px #fff'
+            // 'text-shadow': '0 0 10px #a6bfc2', // Add white glow box shadow effect
+        });
+
+        $('body').append(wishElement);
+
+        wishElement.animate({
+            'opacity': 1
+        }, 2000, function () {
+            $(this).animate({
+                'opacity': 0
+            }, 2000, function () {
+                $(this).remove();
+            });
+        });
+    };
+
+
+    setInterval(changeWishText, 5000);
+
 
     $('button').on('click', function (event) {
         console.log('Button clicked!');
@@ -52,8 +96,8 @@ $(document).ready(function () {
             const initialY = Math.floor(Math.random() * (maxY / 2)); // Random Y position in the top-left cell
 
             // Calculate final position in the bottom-right cell (3/4 of the screen width and height)
-            const finalX = Math.floor(Math.random() * (maxX / 2) + maxX / 2); // Random X position in the bottom-right cell
-            const finalY = Math.floor(Math.random() * (maxY / 2) + maxY / 2); // Random Y position in the bottom-right cell
+            const finalX = Math.floor(Math.random() * (maxX / 2) + maxX / 2 + 100); // Increase the finalX value by 100
+            const finalY = Math.floor(Math.random() * (maxY / 2) + maxY / 2 + 100); // Increase the finalY value by 100
 
             // Set initial position
             star.css({

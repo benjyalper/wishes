@@ -35,7 +35,8 @@ form {
 }
 
 #wish-label {
-    color: #a6bfc2;
+    color: rgb(252, 159, 244);
+    text-shadow: 0 0 10px #a6bfc2;
     padding: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
@@ -112,32 +113,64 @@ button:hover {
     }
 }
 
-@media (max-width: 650px) {
-    .form-container {
-        margin-top: 70vh;
+/* Default styles for larger screens */
+
+/* Styles for iPhones and smaller screens */
+@media only screen and (max-width: 480px) {
+    body {
+        background-size: contain;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
     }
 
-    form {
+    .form-container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3px;
+        margin-top: auto;
+        margin-bottom: 20px;
+        /* Raise the form by 20px */
     }
 
-    #wish-label {
-        height: 40px;
-    }
-
-    button {
-        /* width: 40px; */
-        margin-top: 10px;
-        margin-left: none;
-        margin-right: 12vw;
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+        /* Ensure the form takes full width */
+        max-width: 300px;
+        /* Set a maximum width for the form */
     }
 
     input {
-        height: 50px;
-        margin-top: 10px;
-        border: 2px solid rgba(166, 191, 194, 0.2);
+        height: 30px;
+        font-size: medium;
+        width: calc(100% - 60px);
+        /* Reduce width by 40px */
+        /* Ensure the input takes full width */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
     }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: none;
+        margin: 0;
+        /* Set margin to zero */
+        padding: 0;
+        /* Set padding to zero */
+    }
+
+    button>img {
+        height: 25px;
+    }
+
+    /* Add more styles as needed for other elements */
 }
