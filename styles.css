@@ -114,10 +114,7 @@ button:hover {
 
 @media (max-width: 650px) {
     .form-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 72vh;
+        margin-top: 70vh;
     }
 
     form {
