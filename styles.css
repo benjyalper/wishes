@@ -29,6 +29,7 @@ button>img:hover {
     display: flex;
     justify-content: center;
     margin-top: 88vh;
+    margin-right: 12vw;
     /* Adjust the margin-top as needed */
 }
 
@@ -80,6 +81,7 @@ button {
     color: rgb(190, 239, 239);
     border: none;
     transition: 2s ease-in-out;
+    margin-left: 3em;
 }
 
 button:hover {
