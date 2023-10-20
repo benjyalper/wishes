@@ -41,6 +41,7 @@ form {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
     width: 200px;
+    border: 2px solid rgb(166, 191, 194, 0.2);
     /* Set a fixed width for the label */
     text-align: center;
     /* Center the text inside the label */
