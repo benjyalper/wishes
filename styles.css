@@ -142,7 +142,7 @@ button:hover {
     }
 
     button {
-        width: 40px;
+        /* width: 40px; */
         margin-top: 10px;
         margin-left: none;
         margin-right: 12vw;
