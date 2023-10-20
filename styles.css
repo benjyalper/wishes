@@ -1,13 +1,8 @@
 body {
     background-image: url('images/StaryNight3.jpg');
     background-size: cover;
-    background-attachment: fixed;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    /* Set body height to fill the viewport */
-    overflow: hidden;
-    /* Prevent scrolling when content overflows */
 }
 
 h1 {
@@ -118,11 +113,6 @@ button:hover {
 }
 
 @media (max-width: 650px) {
-    body {
-        height: 100vh;
-        overflow: auto;
-    }
-
     .form-container {
         display: flex;
         flex-direction: column;
