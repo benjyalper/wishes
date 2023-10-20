@@ -120,6 +120,7 @@ button:hover {
 @media (max-width: 650px) {
     body {
         height: 100vh;
+        overflow: auto;
     }
 
     .form-container {
@@ -141,9 +142,10 @@ button:hover {
     }
 
     button {
-        width: 50px;
+        width: 40px;
         margin-top: 10px;
         margin-left: none;
+        margin-right: 12vw;
     }
 
     input {
