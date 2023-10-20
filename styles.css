@@ -24,9 +24,12 @@ button>img:hover {
 .form-container {
     display: flex;
     justify-content: center;
+    margin-right: 15vw;
     margin-top: 88vh;
+    gap: 20px;
     /* Adjust the margin-top as needed */
 }
+
 
 
 form {
@@ -81,6 +84,7 @@ button {
     color: rgb(190, 239, 239);
     border: none;
     transition: 2s ease-in-out;
+    margin-left: 2em;
 }
 
 button:hover {
